@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#e6e6e6"
+    tools:context="org.azurespot.gridimagesearch.AdvancedOptionsActivity" >
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:onClick="onSubmit"
+        android:background="#668fa5"
+        android:text="@string/btnSubmit"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/resetButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Reset"
+        android:layout_alignTop="@+id/btnSubmit"
+        android:layout_alignRight="@+id/image_size"
+        android:layout_alignEnd="@+id/image_size" />
+
+    <TextView
+        android:id="@+id/advanced_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:textSize="16sp"
+        android:text="@string/advanced_label" />
+
+    <TextView
+        android:id="@+id/type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_type"
+        android:layout_alignLeft="@id/advanced_label"
+        android:text="@string/type_label"
+        android:textSize="18sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/color_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/color_filter"
+        android:layout_alignLeft="@id/type_label"
+        android:text="@string/color_label"
+        android:textSize="18sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_size"
+        android:layout_alignLeft="@id/color_label"
+        android:text="@string/size_label"
+        android:textSize="18sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/image_size"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/color_filter"
+        android:layout_below="@+id/color_filter"
+        android:layout_marginTop="34dp"
+        android:entries="@array/image_size"
+        android:prompt="@string/size_prompt"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/color_filter"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_type"
+        android:layout_below="@+id/image_type"
+        android:layout_marginTop="32dp"
+        android:entries="@array/color_filter"
+        android:prompt="@string/color_prompt"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/image_type"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/advanced_label"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="26dp"
+        android:entries="@array/image_type"
+        android:prompt="@string/type_prompt"
+        android:spinnerMode="dropdown" />
+
+
+
+</RelativeLayout>

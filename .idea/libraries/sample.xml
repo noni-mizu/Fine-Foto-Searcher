@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sample">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/src/main/libs/AndroidStaggeredGrid/sample/sample.iml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

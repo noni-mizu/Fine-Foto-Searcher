@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="size_prompt">Image size</string> 
+    <string name="color_prompt">Color filter</string>
+    <string name="type_prompt">Image type</string>
+    
+     <string-array name="image_size">
+         <item>any</item>
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item> 
+        <item>extra-large</item> 
+    </string-array>
+    
+     <string-array name="color_filter">
+         <item>any</item>
+         <item>blue</item>
+         <item>red</item>
+         <item>green</item>
+         <item>orange</item>
+         <item>gray</item>
+     </string-array>
+     
+     <string-array name="image_type">
+         <item>any</item>
+         <item>faces</item>
+         <item>photo</item>
+         <item>line art</item>
+         <item>clip art</item>
+     </string-array>       
+    
+</resources>

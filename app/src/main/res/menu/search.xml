@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:org.azurespot.gridimagesearch="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="3"
+        android:title="@string/action_settings"
+        android:menuCategory="system"
+        org.azurespot.gridimagesearch:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_filter_prefs"
+        android:icon="@drawable/ic_action_filter_prefs"
+        android:orderInCategory="2"
+        android:title="@string/action_filters"
+        android:menuCategory="system"
+        android:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:hint="@string/hint_search"
+        android:orderInCategory="1"
+        android:showAsAction="always|collapseActionView"
+        android:menuCategory="system"
+        android:actionViewClass="android.widget.SearchView" />
+
+
+</menu>

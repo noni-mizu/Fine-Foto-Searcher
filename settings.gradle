@@ -1,0 +1,3 @@
+include ':app', ':library', ':sample', ':staggeredGridView'
+project(':library').projectDir = new File('app/src/main/libs/AndroidStaggeredGrid/library')
+project(':sample').projectDir = new File('app/src/main/libs/AndroidStaggeredGrid/sample')

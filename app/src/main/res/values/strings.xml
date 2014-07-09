@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fine Foto Seacher</string>
+    <string name="search_label">Search</string>
+    <string name="query_hint">Enter search term</string>
+    <string name="title_activity_image_display">Close up!</string>
+    <string name="advanced_search">Advanced Search</string>
+    <string name="title_activity_advanced_options">Filter your photos</string>
+    <string name="advanced_label">Advanced search options</string>
+    <string name="image_size">Image Size</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="type_label">Image type</string>
+    <string name="color_label">Image color</string>
+    <string name="size_label">Image size</string>
+    
+    
+    <!-- The Action Bar search field -->
+    <string name="action_settings">About</string>
+    <string name="action_filters">filters</string>
+    <string name="action_search"></string>
+    <string name="hint_search">search images</string>
+
+
+</resources>

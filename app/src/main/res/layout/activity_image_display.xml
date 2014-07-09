@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageDisplayActivity">
+
+
+    <org.azurespot.gridimagesearch.ScaledImageView
+        android:id="@+id/ivResult"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="3dp"
+        android:background="@drawable/image_border"/>
+
+</RelativeLayout> 
