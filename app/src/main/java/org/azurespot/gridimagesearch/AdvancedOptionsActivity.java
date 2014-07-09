@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-
+import android.widget.TextView;
 
 
 public class AdvancedOptionsActivity extends Activity {
@@ -29,7 +29,7 @@ public class AdvancedOptionsActivity extends Activity {
         restoreFilterPreferences();
 
         // Resets all spinners
-        Button resetFilters = (Button) findViewById(R.id.resetButton);
+        TextView resetFilters = (TextView) findViewById(R.id.resetLabel);
         resetFilters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

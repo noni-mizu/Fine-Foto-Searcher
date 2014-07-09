@@ -10,6 +10,7 @@
     <string name="advanced_label">Advanced search options</string>
     <string name="image_size">Image Size</string>
     <string name="btnSubmit">Submit</string>
+    <string name="resetLabel">Reset</string>
     <string name="type_label">Image type</string>
     <string name="color_label">Image color</string>
     <string name="size_label">Image size</string>

@@ -5,14 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 import android.widget.Toast;
@@ -30,15 +29,12 @@ import java.util.ArrayList;
 
 public class SearchActivity extends Activity {
 
-    private static final String tag = "org.azurespot.gridimagesearch.SearchActivity";
-
     private StaggeredGridView gvResults;
     private String filterPreferences = "";
     private String previousFilterPreferences = "";
     private SearchView searchView;
     AsyncHttpClient client;
-
-    InputMethodManager inputManager;
+    ImageView owlImage;
 
     ArrayList<ImageResult> imageResults = new ArrayList<ImageResult>();
     ImageResultArrayAdapter imageAdapter;
@@ -47,6 +43,9 @@ public class SearchActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        owlImage = (ImageView) findViewById(R.id.imageOwl);
+        owlImage.setVisibility(View.VISIBLE);
 
         // When activity gets destroyed, then this resets your filterPreferences to empty
         if (previousFilterPreferences.equals(filterPreferences)) {
@@ -102,14 +101,6 @@ public class SearchActivity extends Activity {
             }
         });
     }
-//		          //FilterPreferences includes the filters in the search
-//					filterPreferences = getFilterPreferences();
-//					String query = searchView.getQuery().toString();
-//					Toast.makeText(SearchActivity.this, "Searching for " + query, Toast.LENGTH_SHORT).show();
-//
-//					AsyncHttpClient client = new AsyncHttpClient();
-//					imageResults.clear();
-//					makeAsyncHttpGetRequest(client, 0, query);
 
     // Part of endless scrolling
     public void loadMoreImages(int totalItemCount) {
@@ -122,7 +113,8 @@ public class SearchActivity extends Activity {
     //Then makes the HTTP request from the Google API
     private void makeAsyncHttpGetRequest(AsyncHttpClient client, int totalItemCount,
                                          String query){
-        Log.d("DEBUG", "totalItemCount " + totalItemCount);
+        owlImage.setVisibility(View.GONE);
+
         client.get("https://ajax.googleapis.com/ajax/services/search/images?rsz=8&" +
                         filterPreferences + "&start=" + totalItemCount + "&v=1.0&q=" + Uri.encode(query),
                 new JsonHttpResponseHandler() { //A handler is set in case the search doesn't work
@@ -147,7 +139,7 @@ public class SearchActivity extends Activity {
     //and ultimately becomes a part of the getFilterPreferences method
     public String getFilterPreferences() {
 
-        String filterPreferences, imageType, imageSize, colorFilter = null;
+        String filterPreferences, imageType, imageSize, colorFilter;
 
         SharedPreferences filters = getSharedPreferences(AdvancedOptionsActivity.FILTERS, 0);
 

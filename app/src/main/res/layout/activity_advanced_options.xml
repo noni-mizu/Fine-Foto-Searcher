@@ -6,31 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#e6e6e6"
+    android:background="#fff"
     tools:context="org.azurespot.gridimagesearch.AdvancedOptionsActivity" >
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:onClick="onSubmit"
-        android:background="#668fa5"
-        android:text="@string/btnSubmit"
-        android:textSize="25sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp" />
-
-    <Button
-        android:id="@+id/resetButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Reset"
-        android:layout_alignTop="@+id/btnSubmit"
-        android:layout_alignRight="@+id/image_size"
-        android:layout_alignEnd="@+id/image_size" />
 
     <TextView
         android:id="@+id/advanced_label"
@@ -105,6 +82,34 @@
         android:prompt="@string/type_prompt"
         android:spinnerMode="dropdown" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/resetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/resetLabel"
+            android:textSize="20sp"
+            android:textColor="#7f3f00" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:onClick="onSubmit"
+            android:background="#7ab7f4"
+            android:text="@string/btnSubmit"
+            android:textSize="25sp"
+            android:layout_marginBottom="40dp" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
