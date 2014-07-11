@@ -185,8 +185,8 @@ public class SearchActivity extends Activity {
         if (!previousFilterPreferences.equals(filterPreferences)) {
             // Make a new HTTP request
             String query = searchView.getQuery().toString();
-//					Toast.makeText(SearchActivity.this, "Searching for " + query, Toast.LENGTH_SHORT).show();
-//
+					Toast.makeText(SearchActivity.this, "Searching for " + query, Toast.LENGTH_SHORT).show();
+
             AsyncHttpClient client = new AsyncHttpClient();
             imageResults.clear();
             makeAsyncHttpGetRequest(client, 0, query);

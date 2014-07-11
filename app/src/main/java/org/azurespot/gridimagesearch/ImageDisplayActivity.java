@@ -21,7 +21,7 @@ public class ImageDisplayActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_display);
         ImageResult result = (ImageResult) getIntent().getSerializableExtra("result");
-        ScaledImageView ivImage = (ScaledImageView) findViewById(R.id.ivResult);
+        TouchImageView ivImage = (TouchImageView) findViewById(R.id.ivResult);
         Log.i(tag, "result.getFullUrl: " + result.getFullUrl());
         Picasso.with(this).load(result.getFullUrl()).into(ivImage);
 //		ivImage.setImageUrl(result.getFullUrl());
@@ -32,7 +32,7 @@ public class ImageDisplayActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.image_display, menu);
+        getMenuInflater().inflate(R.menu.search, menu);
         return true;
     }
 
