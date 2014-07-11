@@ -8,3 +8,6 @@ Using 3 third party libraries: Picasso for image loading, ScaledImageView for ma
 Owl image source: http://www.clker.com/cliparts/8/C/1/u/N/4/blue-and-orange-owl-hi.png
 
 Made using Eclipse, then migrated into Android Studio to add more features.
+
+
+![alt tag](https://github.com/noni-mizu/Fine-Foto-Searcher/blob/master/FineFotoSearcher%20Demo.gif)
