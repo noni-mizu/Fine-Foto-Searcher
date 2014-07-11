@@ -10,5 +10,5 @@ Owl image source: http://www.clker.com/cliparts/8/C/1/u/N/4/blue-and-orange-owl-
 Made using Eclipse, then migrated into Android Studio to add more features.
 
 
-![FineFotoSearcher Demo](https://raw.github.com/noni-mizu/Fine-Foto-Searcher/master/path/to/FineFotoSearcher%20Demo.gif)
+![FineFotoSearcher Demo](https://raw.github.com/noni-mizu/Fine-Foto-Searcher/master/path/to/FineFotoSearcher Demo.gif)
 
